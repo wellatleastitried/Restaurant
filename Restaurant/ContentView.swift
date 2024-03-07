@@ -14,12 +14,18 @@ struct ContentView: View {
                 MainView()
             } label: {
                 VStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
+                    Image("DeliMeat")
+                        .resizable()
+                    Spacer()
                     Text("Jack's Deli Meats")
+                        .foregroundStyle(Color.white)
+                        .background(Color.brown)
+                    Spacer()
+                    Spacer()
+                    Spacer()
                 }
                 .padding()
+                .background(Color.gray)
             }
         }
     }

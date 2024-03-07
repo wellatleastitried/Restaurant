@@ -14,6 +14,9 @@
 		3A2D83762B9931C700422FE1 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83752B9931C700422FE1 /* RestaurantTests.swift */; };
 		3A2D83802B9931C700422FE1 /* RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D837F2B9931C700422FE1 /* RestaurantUITests.swift */; };
 		3A2D83822B9931C700422FE1 /* RestaurantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83812B9931C700422FE1 /* RestaurantUITestsLaunchTests.swift */; };
+		3A2D838F2B99331F00422FE1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D838E2B99331F00422FE1 /* MainView.swift */; };
+		3A2D83912B9938D400422FE1 /* IncomeSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */; };
+		3A2D83932B9938F100422FE1 /* ExpenseSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		3A2D837B2B9931C700422FE1 /* RestaurantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2D837F2B9931C700422FE1 /* RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantUITests.swift; sourceTree = "<group>"; };
 		3A2D83812B9931C700422FE1 /* RestaurantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3A2D838E2B99331F00422FE1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSourceView.swift; sourceTree = "<group>"; };
+		3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSourceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				3A2D83662B9931C500422FE1 /* ContentView.swift */,
 				3A2D83682B9931C700422FE1 /* Assets.xcassets */,
 				3A2D836A2B9931C700422FE1 /* Preview Content */,
+				3A2D838E2B99331F00422FE1 /* MainView.swift */,
+				3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */,
+				3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -257,7 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2D83912B9938D400422FE1 /* IncomeSourceView.swift in Sources */,
+				3A2D83932B9938F100422FE1 /* ExpenseSourceView.swift in Sources */,
 				3A2D83672B9931C500422FE1 /* ContentView.swift in Sources */,
+				3A2D838F2B99331F00422FE1 /* MainView.swift in Sources */,
 				3A2D83652B9931C500422FE1 /* RestaurantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

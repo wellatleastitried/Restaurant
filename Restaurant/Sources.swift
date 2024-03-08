@@ -14,7 +14,11 @@ class Sources {
     
     init(amount: Float, description: String? = nil) {
         self.amount = amount
-        self.description = description!
+        if (description != nil) {
+            self.description = description!
+        } else {
+            self.description = ""
+        }
     }
     func getAmount() -> Float {
         return self.amount

@@ -10,13 +10,12 @@ import SwiftUI
 struct MainView: View {
     
     @State private var percentage: Int = Int(SourceHandler().calcExpenses())
-    @State private var textColor: Color = Color.black
+    @State private var textColor: Color = SourceHandler().resultOfExpenses()
     
     var body: some View {
         NavigationView {
             VStack (spacing:25) {
                 HStack {
-                    // Dollar sign image
                     Text("Current profit/loss: \(percentage)%")
                         .foregroundStyle(textColor)
                         .multilineTextAlignment(.center)
@@ -27,8 +26,20 @@ struct MainView: View {
                         .background(Color.white)
                 }
                 Spacer()
+                Image("Percentage")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 150, height: 150)
                 HStack {
-                    // Image in front of button
+                    AsyncImage(url: URL(string: "https://unsplash.com/photos/lCPhGxs7pww/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fGV4cGVuc2V8ZW58MHx8fHwxNzEwMTgyMDcyfDA&force=true")) { image in
+                        image.resizable()
+                            .scaledToFill()
+                            .frame(width: 50, height: 50)
+                            .clipped()
+                    } placeholder: {
+                        ProgressView()
+                            .frame(width: 50, height: 50)
+                    }
                     NavigationLink {
                         IncomeSourceView()
                     }
@@ -39,7 +50,15 @@ struct MainView: View {
                 .tint(Color.white)
                 }
                 HStack {
-                    // Image in front of button
+                    AsyncImage(url: URL(string: "https://unsplash.com/photos/xkArbdUcUeE/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8ZXhwZW5zZXxlbnwwfHx8fDE3MTAxODIwNzJ8MA&force=true")) { image in
+                        image.resizable()
+                            .scaledToFill()
+                            .frame(width: 50, height: 50)
+                            .clipped()
+                    } placeholder: {
+                        ProgressView()
+                            .frame(width: 50, height: 50)
+                    }
                     NavigationLink {
                         ExpenseSourceView()
                     }

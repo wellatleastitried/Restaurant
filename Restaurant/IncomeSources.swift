@@ -10,8 +10,9 @@ import Foundation
 class IncomeSources {
     
     public var incomes = [
-        "Ab": Sources(amount: 12946.25),
-        "Bc": Sources(amount: 2018.86)
+        "Advertising": Sources(amount: 12946.25),
+        "Sponsors": Sources(amount: 2018.86),
+        "Customers": Sources(amount: 8375.84)
     ]
     
     func getTotal() -> Float {

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SourceHandler {
     
@@ -14,5 +15,8 @@ class SourceHandler {
     func calcExpenses() -> Float {
         return IncomeSources().getTotal() / ExpenseSources().getTotal() * 100
     }
-    
+    func resultOfExpenses() -> Color {
+        var result = calcExpenses()
+        return result < 100.0 ? Color.red : result == 100.0 ? Color.blue : Color.green
+    }
 }

@@ -21,6 +21,7 @@
 		3A2D838F2B99331F00422FE1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D838E2B99331F00422FE1 /* MainView.swift */; };
 		3A2D83912B9938D400422FE1 /* IncomeSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */; };
 		3A2D83932B9938F100422FE1 /* ExpenseSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */; };
+		3A369F422B9F936D009A2121 /* EditSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A369F412B9F936D009A2121 /* EditSourceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		3A2D838E2B99331F00422FE1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSourceView.swift; sourceTree = "<group>"; };
 		3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSourceView.swift; sourceTree = "<group>"; };
+		3A369F412B9F936D009A2121 /* EditSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSourceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				3A01EDAF2B9A80530053449F /* IncomeSources.swift */,
 				3A01EDB12B9A806D0053449F /* ExpenseSources.swift */,
 				3A01EDB32B9A85300053449F /* Sources.swift */,
+				3A369F412B9F936D009A2121 /* EditSourceView.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				3A2D83672B9931C500422FE1 /* ContentView.swift in Sources */,
 				3A01EDB22B9A806D0053449F /* ExpenseSources.swift in Sources */,
 				3A2D838F2B99331F00422FE1 /* MainView.swift in Sources */,
+				3A369F422B9F936D009A2121 /* EditSourceView.swift in Sources */,
 				3A01EDAE2B9A7C3E0053449F /* SourceHandler.swift in Sources */,
 				3A01EDB02B9A80530053449F /* IncomeSources.swift in Sources */,
 				3A01EDB42B9A85300053449F /* Sources.swift in Sources */,

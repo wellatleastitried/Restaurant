@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ExpenseSourceView: View {
     
-    @State var expenses: [String : Sources] = ExpenseSources().expenses
+    @StateObject var incomeExpenseSources: IncomeExpenseSources = IncomeExpenseSources()
     
     var body: some View {
         NavigationLink {
@@ -19,18 +19,19 @@ struct ExpenseSourceView: View {
         }
         VStack (alignment: .center, spacing: 15) {
             Spacer()
-            ForEach(Array(expenses.keys), id: \.self) { key in
+            ForEach(Array(incomeExpenseSources.expenses.keys), id: \.self) { key in
                 NavigationLink {
-                    EditSourceView(isIncome: false, name: key, dollarAmnt: expenses[key]?.amount ?? 0.0, desc: expenses[key]?.description ?? "", sources: expenses)
+                    EditSourceView(isIncome: false, name: key, dollarAmnt: incomeExpenseSources.expenses[key]?.amount ?? 0.0, desc: incomeExpenseSources.expenses[key]?.description ?? "")
                 } label: {
-                    Text("\(key): " + String(format: "%.2f", expenses[key]?.amount ?? 0))
+                    Text("\(key): " + String(format: "$%.2f", incomeExpenseSources.expenses[key]?.amount ?? 0))
                 }
                 .bold()
                 .foregroundColor(.black)
             }
             Spacer()
             NavigationLink {
-                EditSourceView(isIncome: false, name: "", dollarAmnt: 0.0, desc: "", sources: expenses)
+                EditSourceView(isIncome: false, name: "", dollarAmnt: 0.0, desc: "")
+                    .environmentObject(incomeExpenseSources)
             } label: {
                 Text("Add a new source")
                     .foregroundStyle(Color.black)

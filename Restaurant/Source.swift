@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Sources {
+class Source {
     
     public var amount: Float
     public var description: String

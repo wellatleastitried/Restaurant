@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3A01EDAE2B9A7C3E0053449F /* SourceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01EDAD2B9A7C3E0053449F /* SourceHandler.swift */; };
-		3A01EDB02B9A80530053449F /* IncomeSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01EDAF2B9A80530053449F /* IncomeSources.swift */; };
-		3A01EDB22B9A806D0053449F /* ExpenseSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01EDB12B9A806D0053449F /* ExpenseSources.swift */; };
-		3A01EDB42B9A85300053449F /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01EDB32B9A85300053449F /* Sources.swift */; };
+		3A01EDB02B9A80530053449F /* IncomeExpenseSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01EDAF2B9A80530053449F /* IncomeExpenseSources.swift */; };
+		3A01EDB42B9A85300053449F /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A01EDB32B9A85300053449F /* Source.swift */; };
 		3A2D83652B9931C500422FE1 /* RestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83642B9931C500422FE1 /* RestaurantApp.swift */; };
 		3A2D83672B9931C500422FE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83662B9931C500422FE1 /* ContentView.swift */; };
 		3A2D83692B9931C700422FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2D83682B9931C700422FE1 /* Assets.xcassets */; };
@@ -43,9 +42,8 @@
 
 /* Begin PBXFileReference section */
 		3A01EDAD2B9A7C3E0053449F /* SourceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceHandler.swift; sourceTree = "<group>"; };
-		3A01EDAF2B9A80530053449F /* IncomeSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSources.swift; sourceTree = "<group>"; };
-		3A01EDB12B9A806D0053449F /* ExpenseSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSources.swift; sourceTree = "<group>"; };
-		3A01EDB32B9A85300053449F /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
+		3A01EDAF2B9A80530053449F /* IncomeExpenseSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseSources.swift; sourceTree = "<group>"; };
+		3A01EDB32B9A85300053449F /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		3A2D83612B9931C500422FE1 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2D83642B9931C500422FE1 /* RestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantApp.swift; sourceTree = "<group>"; };
 		3A2D83662B9931C500422FE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,9 +116,8 @@
 				3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */,
 				3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */,
 				3A01EDAD2B9A7C3E0053449F /* SourceHandler.swift */,
-				3A01EDAF2B9A80530053449F /* IncomeSources.swift */,
-				3A01EDB12B9A806D0053449F /* ExpenseSources.swift */,
-				3A01EDB32B9A85300053449F /* Sources.swift */,
+				3A01EDAF2B9A80530053449F /* IncomeExpenseSources.swift */,
+				3A01EDB32B9A85300053449F /* Source.swift */,
 				3A369F412B9F936D009A2121 /* EditSourceView.swift */,
 			);
 			path = Restaurant;
@@ -284,12 +281,11 @@
 				3A2D83912B9938D400422FE1 /* IncomeSourceView.swift in Sources */,
 				3A2D83932B9938F100422FE1 /* ExpenseSourceView.swift in Sources */,
 				3A2D83672B9931C500422FE1 /* ContentView.swift in Sources */,
-				3A01EDB22B9A806D0053449F /* ExpenseSources.swift in Sources */,
 				3A2D838F2B99331F00422FE1 /* MainView.swift in Sources */,
 				3A369F422B9F936D009A2121 /* EditSourceView.swift in Sources */,
 				3A01EDAE2B9A7C3E0053449F /* SourceHandler.swift in Sources */,
-				3A01EDB02B9A80530053449F /* IncomeSources.swift in Sources */,
-				3A01EDB42B9A85300053449F /* Sources.swift in Sources */,
+				3A01EDB02B9A80530053449F /* IncomeExpenseSources.swift in Sources */,
+				3A01EDB42B9A85300053449F /* Source.swift in Sources */,
 				3A2D83652B9931C500422FE1 /* RestaurantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

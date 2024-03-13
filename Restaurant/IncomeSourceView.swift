@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IncomeSourceView: View {
     
-    @State var incomes: [String : Sources] = IncomeSources().incomes
+    @StateObject var incomeExpenseSources: IncomeExpenseSources = IncomeExpenseSources()
     
     var body: some View {
         NavigationLink {
@@ -20,23 +20,26 @@ struct IncomeSourceView: View {
         .buttonStyle(.bordered)
         .foregroundStyle(Color.black)
         VStack (alignment: .center, spacing: 15) {
-            
             Spacer()
-            ForEach(Array(incomes.keys), id: \.self) { key in
+            ForEach(Array(incomeExpenseSources.incomes.keys), id: \.self) { key in
                 NavigationLink {
-                    EditSourceView(isIncome: true, name: key, dollarAmnt: incomes[key]?.amount ?? 0.0, desc: incomes[key]?.description ?? "", sources: incomes)
+                    EditSourceView(isIncome: true, name: key, dollarAmnt: incomeExpenseSources.incomes[key]?.amount ?? 0.0, desc: incomeExpenseSources.incomes[key]?.description ?? "")
                 } label: {
-                    Text("\(key): " + String(format: "%.2f", incomes[key]?.amount ?? 0))
+                    Text("\(key): " + String(format: "$%.2f", incomeExpenseSources.incomes[key]?.amount ?? 0))
                 }
                 .bold()
                 .foregroundColor(.black)
+                .buttonStyle(.borderedProminent)
             }
             Spacer()
-            NavigationLink {
-                EditSourceView(isIncome: true, name: "", dollarAmnt: 0.0, desc: "", sources: incomes)
-            } label: {
-                Text("Add a new source")
-                    .foregroundStyle(Color.black)
+            HStack {
+                NavigationLink {
+                    EditSourceView(isIncome: true, name: "", dollarAmnt: 0.0, desc: "")
+                        .environmentObject(incomeExpenseSources)
+                } label: {
+                    Text("Add a new source")
+                        .foregroundStyle(Color.black)
+                }
             }
         }
         .navigationBarBackButtonHidden(true)

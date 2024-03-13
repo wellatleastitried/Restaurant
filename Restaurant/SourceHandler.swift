@@ -13,7 +13,7 @@ class SourceHandler {
     public var percentage: Int = 0
     
     func calcExpenses() -> Float {
-        return IncomeSources().getTotal() / ExpenseSources().getTotal() * 100
+        return IncomeExpenseSources().getIncomeTotal() / IncomeExpenseSources().getExpenseTotal() * 100
     }
     func resultOfExpenses() -> Color {
         let result = calcExpenses()

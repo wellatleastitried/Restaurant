@@ -7,11 +7,11 @@
 
 import Foundation
 
-class ExpenseSources {
+class ExpenseSources: ObservableObject {
     
-    public var expenses = [
-        "Raw Meat": Sources(amount: 10956.69),
-        "Kitchen Appliances": Sources(amount: 15739.38)
+    @Published var expenses = [
+        "Raw Meat": Source(amount: 10956.69),
+        "Kitchen Appliances": Source(amount: 15739.38)
     ]
     
     func getTotal() -> Float {
@@ -22,7 +22,7 @@ class ExpenseSources {
         return total
     }
     func addExpense(expenseName: String, expenseAmnt: Float) {
-        expenses[expenseName] = Sources(amount: expenseAmnt)
+        expenses[expenseName] = Source(amount: expenseAmnt)
     }
     func removeExpense(expense: String) {
         expenses.removeValue(forKey: expense)

@@ -16,7 +16,7 @@ class SourceHandler {
         return IncomeSources().getTotal() / ExpenseSources().getTotal() * 100
     }
     func resultOfExpenses() -> Color {
-        var result = calcExpenses()
+        let result = calcExpenses()
         return result < 100.0 ? Color.red : result == 100.0 ? Color.blue : Color.green
     }
 }

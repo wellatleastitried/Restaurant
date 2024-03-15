@@ -50,16 +50,20 @@ struct EditSourceView: View {
         .background(Color.gray)
     }
     func saveIncome() {
-        sources.incomes[name] = Source(amount: dollarAmnt, description: desc)
+        if sources.incomes[name] == nil {
+            sources.incomes[name] = Source(amount: dollarAmnt, description: desc)
+        }
     }
     func saveExpense() {
-        sources.expenses[name] = Source(amount: dollarAmnt, description: desc)
+        if sources.expenses[name] == nil {
+            sources.expenses[name] = Source(amount: dollarAmnt, description: desc)
+        }
     }
     func removeIncome() {
-        sources.removeIncome(income: "")
+        sources.removeIncome(income: name)
     }
     func removeExpense() {
-        sources.removeExpense(expense: "")
+        sources.removeExpense(expense: name)
     }
 }
 #Preview {

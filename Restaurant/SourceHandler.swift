@@ -10,10 +10,11 @@ import SwiftUI
 
 class SourceHandler {
     
-    public var percentage: Int = 0
+    
+    public var iES: IncomeExpenseSources
     
     func calcExpenses() -> Float {
-        return IncomeExpenseSources().getIncomeTotal() / IncomeExpenseSources().getExpenseTotal() * 100
+        return iES.getIncomeTotal() / iES.getExpenseTotal() * 100
     }
     func resultOfExpenses() -> Color {
         let result = calcExpenses()

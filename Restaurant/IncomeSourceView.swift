@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IncomeSourceView: View {
     
-    @StateObject var incomeExpenseSources: IncomeExpenseSources = IncomeExpenseSources()
+    @EnvironmentObject var incomeExpenseSources: IncomeExpenseSources
     
     var body: some View {
         NavigationLink {
@@ -47,5 +47,5 @@ struct IncomeSourceView: View {
 }
 
 #Preview {
-    IncomeSourceView()
+    IncomeSourceView().environmentObject(IncomeExpenseSources())
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class IncomeExpenseSources: ObservableObject {
     
@@ -44,5 +45,12 @@ class IncomeExpenseSources: ObservableObject {
     }
     func removeExpense(expense: String) {
         expenses.removeValue(forKey: expense)
+    }
+    func calcExpenses() -> Float {
+        return getIncomeTotal() / getExpenseTotal() * 100
+    }
+    func resultOfExpenses() -> Color {
+        let result = calcExpenses()
+        return result < 100.0 ? Color.red : result == 100.0 ? Color.blue : Color.green
     }
 }

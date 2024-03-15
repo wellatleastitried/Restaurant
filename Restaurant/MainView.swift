@@ -9,21 +9,30 @@ import SwiftUI
 
 struct MainView: View {
     
-    @State private var percentage: Int = Int(SourceHandler().calcExpenses())
-    @State private var textColor: Color = SourceHandler().resultOfExpenses()
+    @ObservedObject var incomeExpenseSources: IncomeExpenseSources = IncomeExpenseSources()
     
     var body: some View {
         NavigationView {
             VStack (spacing:25) {
-                HStack {
-                    Text("Current profit/loss: \(percentage)%")
-                        .foregroundStyle(textColor)
+                HStack (spacing: 0){
+                    Text("Current profit/loss: ")
+                        .foregroundStyle(Color.black)
                         .multilineTextAlignment(.center)
                         .bold()
                         .kerning(1.25)
                         .frame(maxWidth: .infinity)
                         .frame(maxHeight: 50)
                         .background(Color.white)
+                    Text(String(format: "%.2f%%", incomeExpenseSources.calcExpenses()))
+                        .foregroundStyle(incomeExpenseSources.resultOfExpenses())
+                        .multilineTextAlignment(.center)
+                        .bold()
+                        .kerning(1.25)
+                        .frame(maxWidth: .infinity)
+                        .frame(maxHeight: 50)
+                        .background(Color.white)
+//                    Text("Current profit/loss: \(incomeExpenseSources.calcExpenses())%")
+                        
                 }
                 Spacer()
                 Image("Percentage")
@@ -42,6 +51,7 @@ struct MainView: View {
                     }
                     NavigationLink {
                         IncomeSourceView()
+                            .environmentObject(incomeExpenseSources)
                     }
                     label: {
                         Text("View and Modify Income")
@@ -61,6 +71,7 @@ struct MainView: View {
                     }
                     NavigationLink {
                         ExpenseSourceView()
+                            .environmentObject(incomeExpenseSources)
                     }
                     label: {
                         Text("View and Modify Expense")

@@ -35,6 +35,8 @@ struct EditSourceView: View {
                 Button {
                     if !isAdd {
                         isIncome ? saveIncome() : saveExpense()
+                    } else {
+                        isIncome ? addIncome() : addExpense()
                     }
                 } label: {
                     Text("Save source")

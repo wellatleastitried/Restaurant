@@ -20,6 +20,7 @@
 		3A2D83912B9938D400422FE1 /* IncomeSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */; };
 		3A2D83932B9938F100422FE1 /* ExpenseSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */; };
 		3A369F422B9F936D009A2121 /* EditSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A369F412B9F936D009A2121 /* EditSourceView.swift */; };
+		3AF4292F2BA514870087ED64 /* ManageReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4292E2BA514870087ED64 /* ManageReservationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3A2D83902B9938D400422FE1 /* IncomeSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeSourceView.swift; sourceTree = "<group>"; };
 		3A2D83922B9938F100422FE1 /* ExpenseSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseSourceView.swift; sourceTree = "<group>"; };
 		3A369F412B9F936D009A2121 /* EditSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSourceView.swift; sourceTree = "<group>"; };
+		3AF4292E2BA514870087ED64 /* ManageReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageReservationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				3A01EDAF2B9A80530053449F /* IncomeExpenseSources.swift */,
 				3A01EDB32B9A85300053449F /* Source.swift */,
 				3A369F412B9F936D009A2121 /* EditSourceView.swift */,
+				3AF4292E2BA514870087ED64 /* ManageReservationView.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				3A01EDB02B9A80530053449F /* IncomeExpenseSources.swift in Sources */,
 				3A01EDB42B9A85300053449F /* Source.swift in Sources */,
 				3A2D83652B9931C500422FE1 /* RestaurantApp.swift in Sources */,
+				3AF4292F2BA514870087ED64 /* ManageReservationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

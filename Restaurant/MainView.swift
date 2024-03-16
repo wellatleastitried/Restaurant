@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var incomeExpenseSources: IncomeExpenseSources = IncomeExpenseSources()
+    @EnvironmentObject var incomeExpenseSources: IncomeExpenseSources
     
     var body: some View {
         NavigationView {
@@ -31,7 +31,6 @@ struct MainView: View {
                         .frame(maxWidth: .infinity)
                         .frame(maxHeight: 50)
                         .background(Color.white)
-//                    Text("Current profit/loss: \(incomeExpenseSources.calcExpenses())%")
                         
                 }
                 Spacer()
@@ -56,8 +55,8 @@ struct MainView: View {
                     label: {
                         Text("View and Modify Income")
                     }
-                .buttonStyle(.bordered)
-                .tint(Color.white)
+                    .buttonStyle(.bordered)
+                    .tint(Color.white)
                 }
                 HStack {
                     AsyncImage(url: URL(string: "https://unsplash.com/photos/xkArbdUcUeE/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Mnx8ZXhwZW5zZXxlbnwwfHx8fDE3MTAxODIwNzJ8MA&force=true")) { image in
@@ -76,9 +75,16 @@ struct MainView: View {
                     label: {
                         Text("View and Modify Expense")
                     }
+                    .buttonStyle(.bordered)
+                    .tint(Color.white)
+                }
+                NavigationLink {
+                    ManageReservationView()
+                } label: {
+                    Text("Manage Reservations")
+                }
                 .buttonStyle(.bordered)
                 .tint(Color.white)
-                }
                 Spacer()
             }
             .background(Color.gray)
@@ -90,4 +96,5 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .environmentObject(IncomeExpenseSources())
 }

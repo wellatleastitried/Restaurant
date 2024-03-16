@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EditSourceView: View {
+    public var isAdd: Bool
     public var isIncome: Bool
     @State public var name: String
     @State public var dollarAmnt: Float
@@ -32,7 +33,9 @@ struct EditSourceView: View {
             Spacer()
             HStack (spacing: 50){
                 Button {
-                    isIncome ? saveIncome() : saveExpense()
+                    if !isAdd {
+                        isIncome ? saveIncome() : saveExpense()
+                    }
                 } label: {
                     Text("Save source")
                         .foregroundStyle(Color.white)
@@ -50,22 +53,36 @@ struct EditSourceView: View {
         .background(Color.gray)
     }
     func saveIncome() {
-        if sources.incomes[name] == nil {
+        if sources.incomes.keys.contains(name) {
             sources.incomes[name] = Source(amount: dollarAmnt, description: desc)
         }
     }
     func saveExpense() {
-        if sources.expenses[name] == nil {
+        if sources.expenses.keys.contains(name) {
             sources.expenses[name] = Source(amount: dollarAmnt, description: desc)
         }
     }
     func removeIncome() {
-        sources.removeIncome(income: name)
+        if sources.incomes.keys.contains(name) {
+            sources.removeIncome(income: name)
+        }
     }
     func removeExpense() {
-        sources.removeExpense(expense: name)
+        if sources.expenses.keys.contains(name) {
+            sources.removeExpense(expense: name)
+        }
+    }
+    func addIncome() {
+        if !sources.incomes.keys.contains(name) {
+            sources.incomes[name] = Source(amount: dollarAmnt, description: desc)
+        }
+    }
+    func addExpense() {
+        if !sources.expenses.keys.contains(name) {
+            sources.expenses[name] = Source(amount: dollarAmnt, description: desc)
+        }
     }
 }
 #Preview {
-    EditSourceView(isIncome: true, name: "", dollarAmnt: 0.0, desc: "")
+    EditSourceView(isAdd: false, isIncome: true, name: "", dollarAmnt: 0.0, desc: "")
 }

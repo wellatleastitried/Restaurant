@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var incomeExpenseSources: IncomeExpenseSources = IncomeExpenseSources()
+    
     var body: some View {
         NavigationView {
             NavigationLink {
                 MainView()
+                    .environmentObject(incomeExpenseSources)
             } label: {
                 VStack {
                     Image("DeliMeat")
